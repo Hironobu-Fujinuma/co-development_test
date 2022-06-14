@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func pullOmikuji(_ sender: Any) {
-        let items = ["大吉", "中吉", "小吉","末吉"]
+        let items = ["大吉", "中吉", "小吉", "末吉", "大凶"]
         let r = Int(arc4random()) % items.count
         resultBox.text = items[r]
     }
