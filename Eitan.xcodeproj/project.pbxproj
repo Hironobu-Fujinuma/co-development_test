@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F5191EC2852FC0B00E6765F /* Omikuji3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omikuji3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5191EC2852FC0B00E6765F /* Eitan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eitan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5191EF2852FC0B00E6765F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5191F12852FC0B00E6765F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F5191F32852FC0B00E6765F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		5F5191ED2852FC0B00E6765F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F5191EC2852FC0B00E6765F /* Omikuji3.app */,
+				5F5191EC2852FC0B00E6765F /* Eitan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F5191EB2852FC0B00E6765F /* Omikuji3 */ = {
+		5F5191EB2852FC0B00E6765F /* Eitan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F5192002852FC0D00E6765F /* Build configuration list for PBXNativeTarget "Omikuji3" */;
+			buildConfigurationList = 5F5192002852FC0D00E6765F /* Build configuration list for PBXNativeTarget "Eitan" */;
 			buildPhases = (
 				5F5191E82852FC0B00E6765F /* Sources */,
 				5F5191E92852FC0B00E6765F /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Omikuji3;
+			name = Eitan;
 			productName = Omikuji3;
-			productReference = 5F5191EC2852FC0B00E6765F /* Omikuji3.app */;
+			productReference = 5F5191EC2852FC0B00E6765F /* Eitan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F5191E72852FC0B00E6765F /* Build configuration list for PBXProject "Omikuji3" */;
+			buildConfigurationList = 5F5191E72852FC0B00E6765F /* Build configuration list for PBXProject "Eitan" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F5191EB2852FC0B00E6765F /* Omikuji3 */,
+				5F5191EB2852FC0B00E6765F /* Eitan */,
 			);
 		};
 /* End PBXProject section */
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F5191E72852FC0B00E6765F /* Build configuration list for PBXProject "Omikuji3" */ = {
+		5F5191E72852FC0B00E6765F /* Build configuration list for PBXProject "Eitan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F5191FE2852FC0D00E6765F /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F5192002852FC0D00E6765F /* Build configuration list for PBXNativeTarget "Omikuji3" */ = {
+		5F5192002852FC0D00E6765F /* Build configuration list for PBXNativeTarget "Eitan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F5192012852FC0D00E6765F /* Debug */,
