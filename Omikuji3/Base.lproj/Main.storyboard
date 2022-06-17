@@ -58,7 +58,7 @@
         <!--result-->
         <scene sceneID="7Ro-Gi-wav">
             <objects>
-                <viewController title="result" id="MUX-2q-RQi" sceneMemberID="viewController">
+                <viewController title="result" id="MUX-2q-RQi" customClass="ResultSceneViewController" customModule="Eitan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PQ7-of-mxX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

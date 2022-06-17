@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EA89F55285C48210051261D /* ResultSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA89F54285C48210051261D /* ResultSceneViewController.swift */; };
 		5F5191F02852FC0B00E6765F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5191EF2852FC0B00E6765F /* AppDelegate.swift */; };
 		5F5191F22852FC0B00E6765F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5191F12852FC0B00E6765F /* SceneDelegate.swift */; };
 		5F5191F42852FC0B00E6765F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5191F32852FC0B00E6765F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EA89F54285C48210051261D /* ResultSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSceneViewController.swift; sourceTree = "<group>"; };
 		5F5191EC2852FC0B00E6765F /* Eitan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eitan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5191EF2852FC0B00E6765F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5191F12852FC0B00E6765F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5F5191EF2852FC0B00E6765F /* AppDelegate.swift */,
 				5F5191F12852FC0B00E6765F /* SceneDelegate.swift */,
 				5F5191F32852FC0B00E6765F /* ViewController.swift */,
+				5EA89F54285C48210051261D /* ResultSceneViewController.swift */,
 				5F5191F52852FC0B00E6765F /* Main.storyboard */,
 				5F5191F82852FC0C00E6765F /* Assets.xcassets */,
 				5F5191FA2852FC0D00E6765F /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				5F5191F42852FC0B00E6765F /* ViewController.swift in Sources */,
 				5F5191F02852FC0B00E6765F /* AppDelegate.swift in Sources */,
+				5EA89F55285C48210051261D /* ResultSceneViewController.swift in Sources */,
 				5F5191F22852FC0B00E6765F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
