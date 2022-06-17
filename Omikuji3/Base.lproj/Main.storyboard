@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RWR-wB-39C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RWR-wB-39C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Omikuji3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Eitan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,32 @@
             </objects>
             <point key="canvasLocation" x="783" y="123"/>
         </scene>
+        <!--result-->
+        <scene sceneID="7Ro-Gi-wav">
+            <objects>
+                <viewController title="result" id="MUX-2q-RQi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQ7-of-mxX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE5-Qm-hIo">
+                                <rect key="frame" x="146" y="433" width="124" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="トップへもどる"/>
+                                <connections>
+                                    <segue destination="RWR-wB-39C" kind="presentation" id="UkF-IC-lGU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u11-GL-BUz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="car-KK-JiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="123"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="wQf-lJ-NB4">
             <objects>
@@ -79,6 +105,15 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="ggi-Zq-DOR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzb-En-FJd">
+                                <rect key="frame" x="167" y="475" width="82" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="単語一覧"/>
+                                <connections>
+                                    <segue destination="MUX-2q-RQi" kind="presentation" id="cX4-M5-vhx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S07-s3-VtK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,6 +124,9 @@
             <point key="canvasLocation" x="42.028985507246382" y="122.54464285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UkF-IC-lGU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
