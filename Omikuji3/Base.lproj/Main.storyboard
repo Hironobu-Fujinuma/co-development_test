@@ -46,8 +46,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ここにイディオムが表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pje-po-Kb8">
                                 <rect key="frame" x="39" y="107" width="297" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="backgroundColor" red="0.58954315202016705" green="0.6670839428614932" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,7 +95,7 @@
                         <outlet property="btn1" destination="KIV-ao-Qq3" id="s4v-YC-uFF"/>
                         <outlet property="btn2" destination="YBT-4B-mj8" id="Li9-4K-zDF"/>
                         <outlet property="btn3" destination="hk2-30-fXr" id="bgL-Ys-Qhr"/>
-                        <outlet property="engArea" destination="Pje-po-Kb8" id="7qb-vZ-73h"/>
+                        <outlet property="engArea" destination="Pje-po-Kb8" id="VRN-aj-HG4"/>
                         <outlet property="ox" destination="2yc-dJ-q1P" id="MEm-WY-CX4"/>
                     </connections>
                 </viewController>
@@ -172,15 +173,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UkF-IC-lGU"/>
+        <segue reference="xx2-e8-DxF"/>
         <segue reference="8HC-GD-KCS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

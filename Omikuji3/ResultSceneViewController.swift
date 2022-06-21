@@ -14,8 +14,8 @@ class ResultSceneViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        for i in 0 ..< 50 {
-            print(rslt[i])
+        for qNum in 0 ..< 50 {
+            print(rslt[qNum])
         }
     }
     
