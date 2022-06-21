@@ -16,6 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-3b-w9l">
+                                <rect key="frame" x="98" y="468" width="178" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="次の問題"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YmF-lE-4f8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIV-ao-Qq3">
                                 <rect key="frame" x="39" y="257" width="297" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -25,17 +34,14 @@
                                     <action selector="checkWithBtn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsc-ma-Umu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBT-4B-mj8">
-                                <rect key="frame" x="39" y="302" width="297" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="選択肢２"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk2-30-fXr">
                                 <rect key="frame" x="39" y="352" width="297" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="選択肢３"/>
+                                <connections>
+                                    <action selector="checkWithBtn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMr-Eb-7qF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ここにイディオムが表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pje-po-Kb8">
                                 <rect key="frame" x="39" y="107" width="297" height="85"/>
@@ -54,13 +60,29 @@
                                     <segue destination="RWR-wB-39C" kind="presentation" id="xx2-e8-DxF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-3b-w9l">
-                                <rect key="frame" x="98" y="468" width="178" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yc-dJ-q1P">
+                                <rect key="frame" x="176" y="215" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4q-C5-jtG">
+                                <rect key="frame" x="85" y="429" width="206" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="次の問題"/>
+                                <buttonConfiguration key="configuration" style="plain" title="リザルトへ(テスト用ボタン)"/>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YmF-lE-4f8"/>
+                                    <segue destination="MUX-2q-RQi" kind="presentation" id="8HC-GD-KCS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBT-4B-mj8">
+                                <rect key="frame" x="39" y="305" width="297" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="選択肢２"/>
+                                <connections>
+                                    <action selector="checkWithBtn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1Q-cU-8gV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,6 +95,7 @@
                         <outlet property="btn2" destination="YBT-4B-mj8" id="Li9-4K-zDF"/>
                         <outlet property="btn3" destination="hk2-30-fXr" id="bgL-Ys-Qhr"/>
                         <outlet property="engArea" destination="Pje-po-Kb8" id="7qb-vZ-73h"/>
+                        <outlet property="ox" destination="2yc-dJ-q1P" id="MEm-WY-CX4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,7 +172,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xx2-e8-DxF"/>
+        <segue reference="UkF-IC-lGU"/>
+        <segue reference="8HC-GD-KCS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

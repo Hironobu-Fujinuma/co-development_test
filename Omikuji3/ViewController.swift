@@ -17,19 +17,59 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn2: UIButton!
     @IBOutlet weak var btn3: UIButton!
     
+    @IBOutlet weak var ox: UILabel!
     // 一番上のが押された場合の正誤判定
     @IBAction func checkWithBtn1(_ sender: Any) {
-        
+        if checker[0] == 1 {
+            ox.text = "⭕️"
+            rslt[i] = 1  // 正解フラグを立てる
+        } else {
+            ox.text = "❌"
+        }
+        // ボタンを非活性化
+        btn1.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
     }
-    
+    @IBAction func checkWithBtn2(_ sender: Any) {
+        if checker[1] == 1 {
+            ox.text = "⭕️"
+            rslt[i] = 1  // 正解フラグを立てる
+        } else {
+            ox.text = "❌"
+        }
+        // ボタンを非活性化
+        btn1.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
+    }
+    @IBAction func checkWithBtn3(_ sender: Any) {
+        if checker[1] == 1 {
+            ox.text = "⭕️"
+            rslt[i] = 1  // 正解フラグを立てる
+        } else {
+            ox.text = "❌"
+        }
+        // ボタンを非活性化
+        btn1.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
+    }
     @IBAction func next(_ sender: Any) {
+        if i < 49 {
+            i = i + 1
+        }
+        ox.text = " "  // マルバツを非表示
+        // ボタン復活
+        btn1.isEnabled = true
+        btn2.isEnabled = true
+        btn3.isEnabled = true
         engArea.text = Eng[i]  // 英単語の表示
         btn1.setTitle(Japan[i%50], for: .normal)
         btn2.setTitle(Japan[(i+1)%50], for: .normal)
         btn3.setTitle(Japan[(i+2)%50], for: .normal)
-        if i < 49 {
-            i = i + 1
-        }
+        checker[0] = 1  // 現時点では一番上のボタンが常に正解なので添字0に1を立てる
+        
     }
     @IBOutlet weak var engArea: UILabel!
     override func viewDidLoad() {
@@ -40,7 +80,7 @@ class ViewController: UIViewController {
         btn1.setTitle(Japan[i], for: .normal)
         btn2.setTitle(Japan[i+1], for: .normal)
         btn3.setTitle(Japan[i+2], for: .normal)
-        i = i + 1
+        checker[0] = 1  // 現時点では一番上のボタンが常に正解なので添字0に1を立てる
     }
 
 
