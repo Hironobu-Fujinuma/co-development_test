@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-3b-w9l">
-                                <rect key="frame" x="125" y="471" width="124" height="31"/>
+                                <rect key="frame" x="146" y="469" width="82" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="おみくじを引く"/>
+                                <buttonConfiguration key="configuration" style="plain" title="次の問題"/>
                                 <connections>
-                                    <action selector="pullOmikuji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Vk-kt-nwr"/>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YmF-lE-4f8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIV-ao-Qq3">
@@ -66,7 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wbL-Vq-1Lt"/>
                     <connections>
-                        <outlet property="resultBox" destination="Pje-po-Kb8" id="56p-C9-p1N"/>
+                        <outlet property="engArea" destination="Pje-po-Kb8" id="7qb-vZ-73h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
