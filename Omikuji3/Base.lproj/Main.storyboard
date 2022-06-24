@@ -141,7 +141,7 @@
         <!--test-->
         <scene sceneID="8or-4g-9II">
             <objects>
-                <viewController title="test" id="FgR-V3-yrz" sceneMemberID="viewController">
+                <viewController title="test" id="FgR-V3-yrz" customClass="test" customModule="Eitan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zwZ-yH-qdt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQh-Wq-KML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="123"/>
+            <point key="canvasLocation" x="2319" y="123"/>
         </scene>
         <!--top-->
         <scene sceneID="wQf-lJ-NB4">
@@ -206,7 +206,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="UkF-IC-lGU"/>
-        <segue reference="8HC-GD-KCS"/>
+        <segue reference="cX4-M5-vhx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
