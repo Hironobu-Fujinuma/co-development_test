@@ -24,13 +24,12 @@ class test: UIViewController {
     // マルバツ表示用のラベルに名前を付与
     @IBOutlet weak var ox: UILabel!
     // 英語表示領域に名前を付与
-    @IBOutlet weak var engArea: UILabel!
-    
+    @IBOutlet weak var engarea: UILabel!
     // 一番上の選択肢が押された場合の正誤判定
     @IBAction func checkWithBtn1(_ sender: Any) {
         if checker[0] == 1 {
             ox.text = "⭕️"
-            rslt[qNum] = 1  // 正解フラグを立てる
+            rslt[miss[qNum]] = 1  // 正解フラグを立てる
         } else {
             ox.text = "❌"
         }
@@ -44,7 +43,7 @@ class test: UIViewController {
     @IBAction func checkWithBtn2(_ sender: Any) {
         if checker[1] == 1 {
             ox.text = "⭕️"
-            rslt[qNum] = 1  // 正解フラグを立てる
+            rslt[miss[qNum]] = 1  // 正解フラグを立てる
         } else {
             ox.text = "❌"
         }
@@ -58,7 +57,7 @@ class test: UIViewController {
     @IBAction func checkWithBtn3(_ sender: Any) {
         if checker[2] == 1 {
             ox.text = "⭕️"
-            rslt[qNum] = 1  // 正解フラグを立てる
+            rslt[miss[qNum]] = 1  // 正解フラグを立てる
         } else {
             ox.text = "❌"
         }
@@ -70,17 +69,9 @@ class test: UIViewController {
     
     // 次の問題へ進む処理
     @IBAction func next(_ sender: Any) {
-        for m in 0 ..< 50 { //間違えた問題の添字を取り出す
-            if rslt[m] == 0 {
-                miss.append(m)
-            }
-        }
         
         var missLength = miss.count
         
-        if qNum < missLength-1 {
-            qNum = qNum + 1  // 問題番号をインクリメント
-        }
         ox.text = " "  // マルバツを非表示
         checker = [0, 0, 0]  // 正誤チェッカーを初期化
         // ボタン復活
@@ -89,16 +80,16 @@ class test: UIViewController {
         btn3.isEnabled = true
         
         // 日本語の選択肢３つをランダムに選択
-        // 正解を除いた49要素を一時的に配列 tmpArr にコピー
+        // 正解を除いた49要素を一時的に配列 tmpArr にコピー(正解以外の選択肢を作成するため)
         for j in 0 ..< qNum {
             tmpArr[j] = Japan[j]
         }
-        for j in qNum+1 ..< missLength {
+        for j in qNum+1 ..< 50 {
             tmpArr[j-1] = Japan[j]
         }
         var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
         var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
-        option[correctIdx] = Japan[qNum]  // まず正解を代入
+        option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
         for j in 0 ..< correctIdx {
             option[j] = random2[j]  // 正解以外を代入
         }
@@ -108,24 +99,38 @@ class test: UIViewController {
         // 選択肢のランダム抽出完了
         
         // 表示
-        engArea.text = Eng[qNum]
-        btn1.setTitle(option[0], for: .normal)
-        btn2.setTitle(option[1], for: .normal)
-        btn3.setTitle(option[2], for: .normal)
-        checker[correctIdx] = 1  // 正解の位置にフラグを立てる
-        
+        if qNum < missLength-1 {
+            qNum = qNum + 1  // 問題番号をインクリメント
+            engarea.text = Eng[miss[qNum]]
+            btn1.setTitle(option[0], for: .normal)
+            btn2.setTitle(option[1], for: .normal)
+            btn3.setTitle(option[2], for: .normal)
+            checker[correctIdx] = 1  // 正解の位置にフラグを立てる
+        }else{
+            engarea.text = "終了"
+            btn1.isEnabled = false
+            btn2.isEnabled = false
+            btn3.isEnabled = false
+        }
     }
     
     // 画面読み込み時の処理
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        for m in 0 ..< 50 { //間違えた問題の添字を取り出す
+            if rslt[m] == 0 {
+                miss.append(m)
+            }
+        }
+        
+        var missLength = miss.count
         // 日本語の選択肢３つをランダムに選択
         // 正解を除いた49要素を一時的に配列 tmpArr にコピー
-        for j in 0 ..< qNum {
+        for j in 0 ..< miss[qNum] {
             tmpArr[j] = Japan[j]
         }
-        for j in qNum+1 ..< 50 {
+        for j in miss[qNum]+1 ..< 50 {
             tmpArr[j-1] = Japan[j]
         }
         var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
@@ -140,11 +145,51 @@ class test: UIViewController {
         // 選択肢のランダム抽出完了
         
         // 最初の1問を読み込み時に表示
-        engArea.text = Eng[qNum]
+        engarea.text = Eng[miss[qNum]]
         btn1.setTitle(option[0], for: .normal)
         btn2.setTitle(option[1], for: .normal)
         btn3.setTitle(option[2], for: .normal)
         checker[correctIdx] = 1  // 正解の位置にフラグを立てる
+        qNum = qNum + 1  // 問題番号をインクリメント
     }
 
+    @IBAction func retry(_ sender: Any) {//もう一度
+        btn1.isEnabled = true
+        btn2.isEnabled = true
+        btn3.isEnabled = true
+        qNum = 0
+        miss = [Int]() //missの初期化
+        for m in 0 ..< 50 { //更新された、間違えた問題の添字を取り出す
+            if rslt[m] == 0 {
+                miss.append(m)
+            }
+        }
+        var missLength = miss.count
+        // 日本語の選択肢３つをランダムに選択
+        // 正解を除いた49要素を一時的に配列 tmpArr にコピー
+        for j in 0 ..< miss[qNum] {
+            tmpArr[j] = Japan[j]
+        }
+        for j in miss[qNum]+1 ..< 50 {
+            tmpArr[j-1] = Japan[j]
+        }
+        var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
+        var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
+        option[correctIdx] = Japan[qNum]  // まず正解を代入
+        for j in 0 ..< correctIdx {
+            option[j] = random2[j]  // 正解以外を代入
+        }
+        for j in correctIdx+1 ..< 3 {
+            option[j] = random2[j-1]  // 正解以外を代入
+        }
+        // 選択肢のランダム抽出完了
+        
+        // 最初の1問を読み込み時に表示
+        engarea.text = Eng[miss[qNum]]
+        btn1.setTitle(option[0], for: .normal)
+        btn2.setTitle(option[1], for: .normal)
+        btn3.setTitle(option[2], for: .normal)
+        checker[correctIdx] = 1  // 正解の位置にフラグを立てる
+        qNum = qNum + 1  // 問題番号をインクリメント
+    }
 }

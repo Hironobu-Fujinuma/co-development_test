@@ -146,16 +146,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYq-Yz-PIf">
-                                <rect key="frame" x="154" y="249" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY0-XE-cJE">
+                                <rect key="frame" x="39" y="257" width="297" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="選択肢１"/>
+                                <connections>
+                                    <action selector="checkWithBtn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDm-bn-XAe"/>
+                                    <action selector="checkWithBtn1:" destination="FgR-V3-yrz" eventType="touchUpInside" id="FBv-fL-c3w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-Uj-DF4">
+                                <rect key="frame" x="39" y="352" width="297" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="選択肢３"/>
+                                <connections>
+                                    <action selector="checkWithBtn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YD8-4s-ZPL"/>
+                                    <action selector="checkWithBtn3:" destination="FgR-V3-yrz" eventType="touchUpInside" id="e3e-hF-EB7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ここにイディオムが表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-0a-xkq">
+                                <rect key="frame" x="39" y="107" width="297" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgj-MP-5dT">
+                                <rect key="frame" x="176" y="215" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1b-bQ-nKG">
+                                <rect key="frame" x="39" y="305" width="297" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="選択肢２"/>
+                                <connections>
+                                    <action selector="checkWithBtn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nh-er-e6b"/>
+                                    <action selector="checkWithBtn2:" destination="FgR-V3-yrz" eventType="touchUpInside" id="Wti-G7-ozE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pe-e1-3kn">
+                                <rect key="frame" x="98" y="416" width="178" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="次の問題"/>
+                                <connections>
+                                    <action selector="next:" destination="FgR-V3-yrz" eventType="touchUpInside" id="SeS-fp-LM3"/>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCu-4Y-D5K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGF-sl-2G1">
+                                <rect key="frame" x="110" y="545" width="154" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="トップへもどる"/>
+                                <connections>
+                                    <segue destination="RWR-wB-39C" kind="push" id="Dm7-lt-lYE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-t0-bOB">
+                                <rect key="frame" x="146" y="506" width="82" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="もう一度"/>
+                                <connections>
+                                    <action selector="retry:" destination="FgR-V3-yrz" eventType="touchUpInside" id="ymG-Wk-6D2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4xP-DS-mXW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="btn1" destination="qY0-XE-cJE" id="mUh-Fj-j6y"/>
+                        <outlet property="btn2" destination="O1b-bQ-nKG" id="e8w-M1-J9i"/>
+                        <outlet property="btn3" destination="k9C-Uj-DF4" id="83Y-O3-X9j"/>
+                        <outlet property="engarea" destination="qUn-0a-xkq" id="xKg-en-qYp"/>
+                        <outlet property="ox" destination="qgj-MP-5dT" id="eWF-vT-dV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQh-Wq-KML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,6 +273,7 @@
                         <viewLayoutGuide key="safeArea" id="S07-s3-VtK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aPb-zI-fGL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3U-Iw-obF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,12 +281,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UkF-IC-lGU"/>
-        <segue reference="cX4-M5-vhx"/>
+        <segue reference="Dm7-lt-lYE"/>
+        <segue reference="8HC-GD-KCS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
