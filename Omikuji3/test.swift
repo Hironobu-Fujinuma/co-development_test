@@ -124,34 +124,41 @@ class test: UIViewController {
                 miss.append(m)
             }
         }
-        
+        //全問正解の場合
         var missLength = miss.count
-        // 日本語の選択肢３つをランダムに選択
-        // 正解を除いた49要素を一時的に配列 tmpArr にコピー
-        for j in 0 ..< miss[qNum] {
-            tmpArr[j] = Japan[j]
+        if missLength == 0 {
+            engarea.text = "おめでとう！全問正解！"
+            btn1.isEnabled = false
+            btn2.isEnabled = false
+            btn3.isEnabled = false
+        }else{
+            // 日本語の選択肢３つをランダムに選択
+            // 正解を除いた49要素を一時的に配列 tmpArr にコピー
+            for j in 0 ..< miss[qNum] {
+                tmpArr[j] = Japan[j]
+            }
+            for j in miss[qNum]+1 ..< 50 {
+                tmpArr[j-1] = Japan[j]
+            }
+            var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
+            var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
+            option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
+            for j in 0 ..< correctIdx {
+                option[j] = random2[j]  // 正解以外を代入
+            }
+            for j in correctIdx+1 ..< 3 {
+                option[j] = random2[j-1]  // 正解以外を代入
+            }
+            // 選択肢のランダム抽出完了
+            
+            // 最初の1問を読み込み時に表示
+            engarea.text = Eng[miss[qNum]]
+            btn1.setTitle(option[0], for: .normal)
+            btn2.setTitle(option[1], for: .normal)
+            btn3.setTitle(option[2], for: .normal)
+            checker[correctIdx] = 1  // 正解の位置にフラグを立てる
+            qNum = qNum + 1  // 問題番号をインクリメント
         }
-        for j in miss[qNum]+1 ..< 50 {
-            tmpArr[j-1] = Japan[j]
-        }
-        var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
-        var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
-        option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
-        for j in 0 ..< correctIdx {
-            option[j] = random2[j]  // 正解以外を代入
-        }
-        for j in correctIdx+1 ..< 3 {
-            option[j] = random2[j-1]  // 正解以外を代入
-        }
-        // 選択肢のランダム抽出完了
-        
-        // 最初の1問を読み込み時に表示
-        engarea.text = Eng[miss[qNum]]
-        btn1.setTitle(option[0], for: .normal)
-        btn2.setTitle(option[1], for: .normal)
-        btn3.setTitle(option[2], for: .normal)
-        checker[correctIdx] = 1  // 正解の位置にフラグを立てる
-        qNum = qNum + 1  // 問題番号をインクリメント
     }
 
     @IBAction func retry(_ sender: Any) {//もう一度
@@ -165,32 +172,41 @@ class test: UIViewController {
                 miss.append(m)
             }
         }
-        var missLength = miss.count
-        // 日本語の選択肢３つをランダムに選択
-        // 正解を除いた49要素を一時的に配列 tmpArr にコピー
-        for j in 0 ..< miss[qNum] {
-            tmpArr[j] = Japan[j]
-        }
-        for j in miss[qNum]+1 ..< 50 {
-            tmpArr[j-1] = Japan[j]
-        }
-        var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
-        var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
-        option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
-        for j in 0 ..< correctIdx {
-            option[j] = random2[j]  // 正解以外を代入
-        }
-        for j in correctIdx+1 ..< 3 {
-            option[j] = random2[j-1]  // 正解以外を代入
-        }
-        // 選択肢のランダム抽出完了
         
-        // 最初の1問を読み込み時に表示
-        engarea.text = Eng[miss[qNum]]
-        btn1.setTitle(option[0], for: .normal)
-        btn2.setTitle(option[1], for: .normal)
-        btn3.setTitle(option[2], for: .normal)
-        checker[correctIdx] = 1  // 正解の位置にフラグを立てる
-        qNum = qNum + 1  // 問題番号をインクリメント
+        //全問正解の場合
+        var missLength = miss.count
+        if missLength == 0 {
+            engarea.text = "終了"
+            btn1.isEnabled = false
+            btn2.isEnabled = false
+            btn3.isEnabled = false
+        }else{
+            // 日本語の選択肢３つをランダムに選択
+            // 正解を除いた49要素を一時的に配列 tmpArr にコピー
+            for j in 0 ..< miss[qNum] {
+                tmpArr[j] = Japan[j]
+            }
+            for j in miss[qNum]+1 ..< 50 {
+                tmpArr[j-1] = Japan[j]
+            }
+            var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
+            var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
+            option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
+            for j in 0 ..< correctIdx {
+                option[j] = random2[j]  // 正解以外を代入
+            }
+            for j in correctIdx+1 ..< 3 {
+                option[j] = random2[j-1]  // 正解以外を代入
+            }
+            // 選択肢のランダム抽出完了
+            
+            // 最初の1問を読み込み時に表示
+            engarea.text = Eng[miss[qNum]]
+            btn1.setTitle(option[0], for: .normal)
+            btn2.setTitle(option[1], for: .normal)
+            btn3.setTitle(option[2], for: .normal)
+            checker[correctIdx] = 1  // 正解の位置にフラグを立てる
+            qNum = qNum + 1  // 問題番号をインクリメント
+        }
     }
 }
