@@ -142,6 +142,15 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="7Ah-8B-zxc"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp5-YL-ciY">
+                                                <rect key="frame" x="147" y="5311" width="82" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="復習する"/>
+                                                <connections>
+                                                    <segue destination="FgR-V3-yrz" kind="presentation" modalPresentationStyle="fullScreen" id="iJ8-Za-9T3"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -331,7 +340,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ahe-cY-jCf"/>
+        <segue reference="9xQ-sv-29E"/>
         <segue reference="8HC-GD-KCS"/>
         <segue reference="7Ah-8B-zxc"/>
     </inferredMetricsTieBreakers>
