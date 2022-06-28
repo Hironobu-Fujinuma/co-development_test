@@ -175,7 +175,7 @@ class test: UIViewController {
         }
         var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
         var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
-        option[correctIdx] = Japan[qNum]  // まず正解を代入
+        option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
         for j in 0 ..< correctIdx {
             option[j] = random2[j]  // 正解以外を代入
         }
