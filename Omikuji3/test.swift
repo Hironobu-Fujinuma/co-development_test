@@ -89,18 +89,19 @@ class test: UIViewController {
         }
         var random2 = tmpArr.shuffled().prefix(2)  // シャッフルして先頭２要素を取得
         var correctIdx = Int.random(in: 0..<3)  // 正解の位置を乱数として取得
-        option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
-        for j in 0 ..< correctIdx {
-            option[j] = random2[j]  // 正解以外を代入
-        }
-        for j in correctIdx+1 ..< 3 {
-            option[j] = random2[j-1]  // 正解以外を代入
-        }
+        
         // 選択肢のランダム抽出完了
         
         // 表示
         if qNum < missLength-1 {
             qNum = qNum + 1  // 問題番号をインクリメント
+            option[correctIdx] = Japan[miss[qNum]]  // まず正解を代入
+            for j in 0 ..< correctIdx {
+                option[j] = random2[j]  // 正解以外を代入
+            }
+            for j in correctIdx+1 ..< 3 {
+                option[j] = random2[j-1]  // 正解以外を代入
+            }
             engarea.text = Eng[miss[qNum]]
             btn1.setTitle(option[0], for: .normal)
             btn2.setTitle(option[1], for: .normal)
